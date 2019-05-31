@@ -8,12 +8,12 @@ body {
   color: white;
   border: solid #ff72ee;
   padding: 0;
-  margin: 5em;
+  margin: 3px;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
 }
 
-/** Grid **/
+/** Grid and layout **/
 .intro {
   display: grid;
   grid-template-columns: repeat(2, 50%);
@@ -24,26 +24,46 @@ header {
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  text-align: center;
-
+  display: flex;
+  justify-content: center;
+  border-bottom: #ff72ee solid;
+  padding: 0;
 }
 
-/** Links **/
-a:link {
-  color: #ff72ee;
+footer {
+  border-top: #ff72ee solid;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
 }
 
-a:hover {
+footer a {
+  padding-left: 20px
+}
+
+/** Messy stuff but it works ^_^ **/
+.preamble h3 {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2em;
   color: #4cf9ff;
+  margin-top: -37px;
+  margin-left: -3px;
+  border-left: #ff72ee solid
 }
-/** Headers **/
+
+.preamble {
+  border-left: #ff72ee solid;
+  margin-left: -4px
+}
+
+/** Headers and text**/
 h1 {
   display: flex;
   font-family: outrun;
   font-size: 6em;
   color: #4cf9ff;
+  letter-spacing: 10px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -58,36 +78,28 @@ h1 {
 
 h2 {
   font-family: 'Roboto Mono', monospace;
-  font-size: 3em;
+  font-size: 2em;
   width: auto;
   color:  #4cf9ff;
   margin: 0;
-  padding-top: 10px;
-  padding-left: 5px;
-}
-
-.summary {
-  width: auto;
   padding-left: 10px;
-}
-
-.preamble {
-  margin-top: -66px;
-  padding: 1%;
-  border-left: #ff72ee solid
+  overflow: hidden;
 }
 
 h3 {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.5em;
+  font-size: 2em;
   color: #4cf9ff;
+  padding-left: 15px;
+  margin: 0;
 }
 
 p {
-  padding-left: 2px;
+  padding-left: 20px;
   text-align: left;
 }
 
+/** images **/
 #zen-supporting::before {
   content: '';
   background-image: url(background.jpg);
@@ -100,6 +112,64 @@ p {
   border-top: #ff72ee solid
 }
 
+.sidebar::after {
+  content: '';
+  background-image: url(background.jpg);
+  background-position: bottom;
+  background-size: cover;
+  height: 150px;
+  display: block;
+}
+
+.sidebar::before {
+  content: '';
+  background-image: url(sidebar.jpg);
+  display: block;
+  height: 200px;
+  height: auto;
+}
+
+footer {
+  background-image: url(background.jpg);
+  background-position: center;
+  height: 150px;
+  background-size: cover;
+}
+
+/** Misc **/
 ::selection {
   background: #ff72ee
+}
+
+/** Links **/
+a:link {
+  color: #ff72ee;
+}
+
+a:hover {
+  color: #4cf9ff;
+}
+
+footer a:link {
+  color: #4cf9ff;
+}
+
+footer a:visited {
+  color: #0C0032
+}
+
+footer a:hover {
+  color: yellow;
+}
+
+footer {
+  font-family: outrun;
+  font-size: 2em;
+  padding-right: 10px;
+}
+
+.wrapper ul {
+  list-style-image: url(list.png);
+  display: flex;
+  flex-direction: column;
 }
