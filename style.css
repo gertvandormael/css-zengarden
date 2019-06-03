@@ -121,12 +121,10 @@ p {
   display: block;
 }
 
-.sidebar::before {
-  content: '';
+.sidebar:before {
   background-image: url(sidebar.jpg);
-  display: block;
   height: 200px;
-  height: auto;
+  height: 500px;
 }
 
 footer {
@@ -172,4 +170,17 @@ footer {
   list-style-image: url(list.png);
   display: flex;
   flex-direction: column;
+}
+
+
+/** Animations **/
+h1 {
+  animation: header 6s ease infinite; 
+}
+
+@keyframes header {
+  0% {color: #4cf9ff}
+  25% {color: #ff72ee}
+  75% {color: yellow}
+  100% {color: #4cf9ff}
 }
